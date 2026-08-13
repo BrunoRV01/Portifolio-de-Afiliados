@@ -1,0 +1,32 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+
+# Banco de dados assíncrono
+sqlalchemy[asyncio]==2.0.35
+alembic==1.13.2
+aiosqlite==0.20.0          # driver async para SQLite (dev/test)
+asyncpg==0.29.0            # driver async para PostgreSQL (produção)
+psycopg2-binary==2.9.9     # usado pelo Alembic em modo offline/sync se necessário
+
+# Validação e configuração
+pydantic==2.9.2
+pydantic-settings==2.5.2
+email-validator==2.2.0
+
+# Segurança
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.9
+
+# Rate limiting
+slowapi==0.1.9
+
+# Integrações com marketplaces (chamadas HTTP assíncronas)
+httpx==0.27.2
+
+# Sincronização periódica (job em background)
+apscheduler==3.10.4
+
+# Integrações externas
+boto3==1.35.0
+openai==1.51.0
